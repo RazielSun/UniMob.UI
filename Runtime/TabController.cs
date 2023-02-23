@@ -17,11 +17,13 @@ namespace UniMob.UI
         public float Duration { get; }
         public int TabCount { get; }
 
-        public TabController(Lifetime lifetime, int tabCount, float duration)
+        public TabController(Lifetime lifetime, int tabCount, float duration, int startIndex = 0)
         {
             Lifetime = lifetime;
             TabCount = tabCount;
             Duration = duration;
+            Index = startIndex;
+            Value = Index;
         }
 
         public void SetValue(float value)
